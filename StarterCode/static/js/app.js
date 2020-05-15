@@ -3,24 +3,24 @@
 
 // YOUR CODE HERE!
 const tbody = document.querySelector('tbody');
-const input = document.querySelector('#Search');
-const dropdown = document.querySelector('.dropdown-menu');
-let filteredSightings = dataSet;
+const input = document.querySelector('#datetime');
+//const dropdown = document.querySelector('#filter-btn');
+let filteredSightings = data;
 
 //add event listener to dropdown buttons
-dropdown.addEventListener('click', e => {
-  //remove whitespace and lowercase the user's search term
-  const filterValue = input.value.trim().toLowerCase();
-  const button = e.target;
-  if (button.tagName === 'BUTTON') {
-    let searchCategory = button.value;
-    filteredSightings = dataSet.filter(sighting => {
-      let sightingFiltered = sighting[searchCategory].toLowerCase();
-      return sightingFiltered === filterValue;
-    });
-  renderTable();
-  }
-});
+// dropdown.addEventListener('click', e => {
+//   //remove whitespace and lowercase the user's search term
+//   const filterValue = input.value.trim().toLowerCase();
+//   const button = e.target;
+//   if (button.tagName === 'BUTTON') {
+//     let searchCategory = button.value;
+//     filteredSightings = dataSet.filter(sighting => {
+//       let sightingFiltered = sighting[searchCategory].toLowerCase();
+//       return sightingFiltered === filterValue;
+//     });
+//   renderTable();
+//   }
+// });
 
 //renderTable renders the filteredData to the tbody
 function renderTable() {
